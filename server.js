@@ -10,7 +10,7 @@ let userID = 0
 
 // CORS Options
 const corsOptions = {
-    origin: 'http://127.0.0.1:5500',
+    origin: 'http://localhost:3000',
     methods: 'GET,POST,PUT,DELETE',
     allowedHeaders: 'Content-Type'
 };
@@ -131,7 +131,7 @@ app.post('/login', async (req, res) => {
 
                 if (exists) { // If the user does exist
                     try {
-                        return res.redirect(301, 'http://127.0.0.1:3000:public/dashboard/index.html'); // Redirect to the main dashboard
+                        return res.status(200).json ({ redirect: true, url: 'http://localhost:3000/dashboard' }) // Redirect to the main dashboard
                     } catch (error) {
                         return { status: 'invalid', message: 'No users provided '} // If no users were provided 
                     }
@@ -205,6 +205,4 @@ app.post('/check-if-user-exists', async (req, res) => {
 app.listen(port, () => { // Message to display if the server is active 
     console.log('Server running on port 3000');
 }); 
-
-
 
