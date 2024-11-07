@@ -23,32 +23,40 @@ class EnterDetails {
 
     SendDetailsToLogin() {
         let LoginRequest = new Login(textboxValues)
-        LoginRequest.Login(); 
+        LoginRequest.login(); 
     }
 }
 
 class Login {
-    Login() {
+   async login() {
         console.log(checkIfTextboxesAreEmpty())
         if (!checkIfTextboxesAreEmpty()) {
             // Assuming peopleArray contains objects with user data
-            fetch('http://127.0.0.1:3000/login', { 
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body:  JSON.stringify({ details:textboxValues }), // Send entire array of details
-            })
-            .then(response => response.text())
-            .then(data => {
-                console.log(data);
-            })
-            .catch(err => {
-                console.error('Error:', err);
-            });
+            try {
+                const response = await fetch('http://localhost:3000/login', { 
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body:  JSON.stringify({ details:textboxValues }), // Send entire array of details
+                })
+                
+                const result = await response.json();
+
+                if (result.redirect) {
+                    console.log('hi')
+                    // Redirect the browser to the provided URL
+                    window.location.href = result.url;
+                } else {
+                    console.log(result.message); // Handle other responses
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
         } console.log('Details are incomplete')
     }
 }
+
 // Setting Visibilty
 document.getElementById('labels').style.visibility = 'hidden'
 document.getElementById('createaccount').style.visibility = 'hidden'

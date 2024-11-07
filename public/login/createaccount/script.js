@@ -62,7 +62,7 @@ function createNewPerson() {
 }
 
 function checkIfPersonExists () { // Function to check if the user exists
-    return fetch('http://127.0.0.1:3000/check-if-user-exists', {
+    return fetch('http://localhost:3000/check-if-user-exists', {
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json'
