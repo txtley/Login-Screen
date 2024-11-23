@@ -44,7 +44,6 @@ class Login {
                 const result = await response.json();
 
                 if (result.redirect) {
-                    console.log('hi')
                     // Redirect the browser to the provided URL
                     window.location.href = result.url;
                 } else {
@@ -53,7 +52,10 @@ class Login {
             } catch (error) {
                 console.error('Error:', error);
             }
-        } console.log('Details are incomplete')
+        } else {
+            document.getElementById('labels').style.visibility = 'visible'
+            document.getElementById('createaccount').style.visibility = 'visible'
+        }
     }
 }
 
