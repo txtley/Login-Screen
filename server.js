@@ -201,6 +201,7 @@ app.post('/check-if-user-exists', async (req, res) => {
 });
 
 
+
 // Start the server
 app.listen(port, () => { // Message to display if the server is active 
     console.log('Server running on port 3000');
