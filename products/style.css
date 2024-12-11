@@ -1,0 +1,261 @@
+html{
+    background-image: url('../products/images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+.mainheader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: magenta;
+    font-family: 'Audiowide',  sans-serif;
+    font-style: oblique;
+    padding: 25px;
+}
+
+.logo {
+    display: flex;
+    justify-content: left;
+    width: 90%;
+    position: absolute;
+}
+
+
+.iconContainer {
+   display: flex;
+   justify-content: right;
+   align-items: center;
+   position: absolute;
+   width: 90%;
+}
+
+.icon {
+    margin: 5px;
+}
+
+.socialsContainer {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: absolute;
+    width: 95%;
+    margin-top: 10px;
+}
+
+.fa-icon {
+    margin: 2px;
+    background-color: white;
+    padding: 2px; 
+    cursor: pointer;
+}
+
+.productsHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: blueviolet;
+    top: 240px;
+    font-family: 'Audiowide',  sans-serif;
+    font-size: 20px;
+    width: 100%;
+    height: 60px;
+}
+
+.fa-product {
+    margin: 35px;
+    cursor: pointer;
+}
+
+.searchbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 150px; 
+    top: 160px;
+    width: 700px;
+    transition: opacity 0.5s ease-out;
+}
+
+.searchbar :hover {
+    opacity: 0.95;
+}
+
+.searchbar input {
+    width: 100%;
+    background-color: beige;
+    padding: 15px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Audiowide', sans-serif;
+}
+
+.searchbar input::placeholder {
+    color: #999;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Audiowide', sans-serif;
+}
+
+.searchbarIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    padding: 8px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.searchbarIcon i {
+    color: white;
+}
+
+.ourFireworksContainer {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 320px;
+    width: 100%;
+    left: 0;
+    height: 200px; 
+    border-radius: 15px;
+    background-image: url(../products/images/ourfireworkbackground.png);    
+    padding: 20px; 
+    transition: background-image 0.5s ease-in;
+}
+
+.ourFireworksContainer:hover {
+    background-image: url(../products/images/ourfireworkbackgroundHover.png);
+}
+
+.ourFireworksContainer .ourFireworksHeader {
+    font-size: 45px;
+    font-family: 'Audiowide', sans-serif;
+    color: black;
+    margin: 0;
+    cursor: pointer;
+}
+
+.supplierContainer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    font-family: 'Audiowide', sans-serif; 
+    top: 600px;
+    width: 40%;
+    border-radius: 15px;
+    border: 5px solid black; 
+    background-color: aliceblue;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.manufacturerLogos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 700px;
+    width: 100%;
+}
+
+.manufacturerLogos img {
+    margin: 20px;
+}
+
+.productContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    top: 950px;
+}
+
+.product-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 200px;
+    margin-bottom: 650px;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease-out;
+}
+
+.product-item:last-child {
+    margin-bottom: 50px;
+}
+
+.product-item:hover {
+    opacity: 0.8;
+}
+
+.product-item .header a {
+    font-size: 35px;
+    color: black;
+    font-family: 'Audiowide', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.video-item {
+    position: absolute;
+    width: 100%;
+    max-width: 300px;
+    height: 5%;
+}
+
+.video-item video {
+    width: 100%;
+    max-height: 500px;
+}
+
+.product-item[data-product="sparkler"]  {
+    background-image: url(../products/images/sparkler.png);
+} 
+
+.product-item[data-product="rocket"] {
+    background-image: url(../products/images/rocket.png);
+}
+
+.product-item[data-product="cake"] {
+    background-image: url(../products/images/cake.png);
+}
+
+.product-item[data-product="fountain"] {
+    background-image: url(../products/images/fountain.png);
+}
+
+.product-item[data-product="selectionboxes"] {
+    background-image: url(../products/images/selectionbox.png);
+}
+
+.video-item[data-product="sparkler"] { top: 250px; }
+.video-item[data-product="rocket"] { top: 2050px; }  
+.video-item[data-product="cake"] { top: 2900px; }   
+.video-item[data-product="fountain"] { top: 1150px; }  
+.video-item[data-product="selectionboxes"] { top: 3900px; }
