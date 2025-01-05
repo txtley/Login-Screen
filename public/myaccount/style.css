@@ -1,0 +1,357 @@
+html{
+    background-color: #181818;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+.mainheader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: magenta;
+    font-family: 'Audiowide',  sans-serif;
+    font-style: oblique;
+    padding: 25px;
+}
+
+.logo {
+    display: flex;
+    justify-content: left;
+    width: 90%;
+    position: absolute;
+}
+
+
+.iconContainer {
+   display: flex;
+   justify-content: right;
+   align-items: center;
+   position: absolute;
+   width: 90%;
+}
+
+.fa-top-icons {
+    margin: 20px;
+}
+
+.my-account {
+    position: relative;
+    display: inline-block;
+}
+
+.my-account-btn {
+    display: none;
+    position: absolute;
+    background-color: #ddd;;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 5%;
+    top: 70%;
+    margin: 5px;
+    z-index: 1;
+}
+
+.my-account-btn a {
+    color: black;
+    display: block;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 10px; 
+}
+
+.my-account-container:hover .my-account-btn{
+    display: block;
+}
+
+.login-btn {
+    display: none;
+    position: absolute;
+    background-color: #ddd;;
+    min-width: 125px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 5%;
+    top: 120%;
+    margin: 5px;
+    z-index: 1;
+}
+
+.login-btn a {
+    color: black;
+    display: block;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 10px; 
+}
+
+.my-account-container:hover .login-btn{
+    display: block;
+}
+
+.shopping-cart {
+    position: relative;
+    display: inline-block;
+}
+
+.shopping-cart-btn {
+    display: none;
+    position: absolute;
+    background-color: #ddd;;
+    min-width: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    top: 70%;
+    z-index: 1;
+}
+
+.shopping-cart-btn a {
+    color: black;
+    display: block;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 10px;  
+}
+
+.shopping-cart-container:hover .shopping-cart-btn {
+    display: block;
+}
+
+.socialsContainer {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: absolute;
+    width: 95%;
+    top: 25%;
+}
+
+.fa-icon {
+    margin: 5px;
+    background-color: white;
+    padding: 2px; 
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.productsHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: blueviolet;
+    top: 240px;
+    font-family: 'Audiowide',  sans-serif;
+    font-size: 20px;
+    width: 100%;
+    height: 60px;
+}
+
+.fa-product {
+    margin: 35px;
+    cursor: pointer;
+}
+
+.searchbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 150px; 
+    top: 160px;
+    width: 700px;
+    transition: opacity 0.5s ease-out;
+}
+
+.searchbar :hover {
+    opacity: 0.95;
+}
+
+.searchbar input {
+    width: 100%;
+    background-color: black;
+    padding: 15px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Audiowide', sans-serif;
+    color: white;
+}
+
+.searchbar input::placeholder {
+    color: #999;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Audiowide', sans-serif;
+}
+
+.searchbarIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    padding: 8px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.searchbarIcon i {
+    color: white;
+}
+
+.form {
+    position: absolute;
+    height: 200%;
+    width: 80%;
+    top: 55%;
+    left: 10%;
+    background-color: black;
+}
+
+.personal-information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Audiowide', sans-serif;
+    color: aliceblue;
+}
+
+.personal-information-header {
+    display: flex;
+    justify-content: left;
+    top: 5%;
+    position: absolute;
+    border: 2px solid grey;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    left: 10%;
+    font-size: 30px;
+}
+
+.personal-information-content  {
+    display: flex;
+    justify-content: left;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+}
+
+
+.personal-save-button {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-color: #000fff;
+    border: none;
+    text-decoration: none;
+    padding: 10px 30px;
+    right: 35%;
+    color: lightgray;
+}
+
+.email-information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Audiowide', sans-serif;
+    color: aliceblue;
+}
+
+.email-content {
+    top: 35%;
+    display: flex;
+    justify-content: left;
+    position: absolute;
+    left: 10%;
+}
+
+.email-information-header {
+    display: flex;
+    justify-content: left;
+    top: 30%;
+    position: absolute;
+    border: 2px solid grey;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    left: 10%;
+    font-size: 30px;
+}
+
+.email-save-button {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-color: #000fff;
+    border: none;
+    text-decoration: none;
+    padding: 10px 30px;
+    color: lightgray;
+    left: 19%;
+    top: 40%;
+}
+
+.password-information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Audiowide', sans-serif;
+    color: aliceblue;
+}
+
+.password-content {
+    top: 50%;
+    display: flex;
+    justify-content: left;
+    position: absolute;
+    left: 10%;
+}
+
+.password-information-header {
+    display: flex;
+    justify-content: left;
+    top: 45%;
+    position: absolute;
+    border: 2px solid grey;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    left: 10%;
+    font-size: 30px;
+}
+
+.password-save-button {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-color: #000fff;
+    border: none;
+    text-decoration: none;
+    padding: 10px 30px;
+    color: lightgray;
+    left: 19%;
+    top: 65%;
+}
+
+.fa-form-element {
+    padding: 10px;
+}
+
+.fa-form-element input {
+    width: 300px;
+}
+
+.fa-email-element input{
+    padding: 10px;
+    width: 300px;
+}

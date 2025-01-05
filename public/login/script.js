@@ -46,15 +46,16 @@ class Login {
                 if (result.redirect) {
                     // Redirect the browser to the provided URL
                     window.location.href = result.url;
-                } else {
-                    console.log(result.message); // Handle other responses
+                } else if (result.message === 'User doesnt exist') {
+                    console.log(result.message); // Handle if the user doesnt exist
+                    document.getElementById('labels').style.visibility = 'visible'
+                    document.getElementById('createaccount').style.visibility = 'visible'
                 }
             } catch (error) {
                 console.error('Error:', error);
             }
         } else {
-            document.getElementById('labels').style.visibility = 'visible'
-            document.getElementById('createaccount').style.visibility = 'visible'
+            console.log('No values have been provided')
         }
     }
 }

@@ -1,4 +1,3 @@
-let userID = 1;  
 const peopleArray = [];  
 
 // Class to enter a new person into the array 'peopleArray'
@@ -20,7 +19,6 @@ class EnterNewPerson {
             phoneNumber: this.phoneNumber,
             email: this.email,
             password: this.password,
-            userID: userID
         }; 
         
         this.addPersonToArray(person); // Sending the object to the next method 
@@ -29,7 +27,6 @@ class EnterNewPerson {
     
     addPersonToArray(person) { // Function to add the person to the array 'peopleArray' 
         peopleArray.push(person);
-        userID += 1; // Adding one to the id for a new user
     }
 }
 
